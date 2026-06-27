@@ -14,210 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Base styles -->
-  <link rel="stylesheet" href="css/styles.v2.css">
-  <!-- Thor palette — inline, zero external dependency -->
-  <style>
-/* ============================================================
-   THOR — повністю ізольований CSS
-   НЕ використовує var() і НЕ залежить від styles.css токенів.
-   Всі кольори — прямі hex. Нуль витоку на index.html.
-   Всі селектори прив'язані до body.thor-page.
-   ============================================================ */
-
-/* Palette reference (comments only — не використовується як змінні):
-   deep      #0F0A1E   deep-2   #1C1333
-   gold      #C9A84C   gold-lt  #E2C27A
-   parchment #F5EDD6   smoke    #D4CCBA
-   purple    #6B4FA0   purp-lt  #9070C8
-*/
-
-body.thor-page {
-  background: #0F0A1E;
-  color: #F5EDD6;
-}
-
-/* NAV */
-body.thor-page nav {
-  border-bottom: 1px solid rgba(201,168,76,0.1);
-}
-body.thor-page nav.scrolled {
-  background: rgba(15,10,30,0.96);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 1px 0 rgba(201,168,76,0.15);
-}
-body.thor-page .nav-logo { color: #F5EDD6; }
-body.thor-page nav.scrolled .nav-logo { color: #C9A84C; }
-body.thor-page .nav-links a { color: rgba(245,237,214,0.85); }
-body.thor-page nav.scrolled .nav-links a { color: #D4CCBA; }
-body.thor-page .nav-links a:hover,
-body.thor-page nav.scrolled .nav-links a:hover { color: #E2C27A; }
-body.thor-page nav.scrolled .nav-burger span { background: #F5EDD6; }
-
-/* MOBILE MENU */
-body.thor-page .mobile-menu { background: #1C1333; }
-body.thor-page .mobile-menu a { color: #F5EDD6; }
-body.thor-page .mobile-menu a:hover { color: #E2C27A; }
-body.thor-page .mobile-menu-close { color: #F5EDD6; }
-
-/* HERO */
-body.thor-page #home { background: #0F0A1E; }
-body.thor-page .hero-orb-1 { background: #6B4FA0; opacity: 0.08; }
-body.thor-page .hero-orb-2 { background: #C9A84C; opacity: 0.07; }
-body.thor-page #home::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(107,79,160,0.06) 0%, transparent 50%);
-  pointer-events: none;
-}
-body.thor-page .hero-eyebrow { color: rgba(201,168,76,0.6); letter-spacing: 0.22em; }
-body.thor-page .hero-title { color: #F5EDD6; }
-body.thor-page .hero-title em { color: #C9A84C; font-style: italic; }
-body.thor-page .hero-tagline { color: rgba(245,237,214,0.65); }
-body.thor-page .scroll-line { background: rgba(201,168,76,0.2); }
-
-/* BUTTONS */
-body.thor-page .btn-primary { background: #C9A84C; color: #0F0A1E; border: none; }
-body.thor-page .btn-primary:hover { background: #E2C27A; }
-body.thor-page .btn-outline { color: #F5EDD6; border-color: rgba(201,168,76,0.35); }
-body.thor-page .btn-outline:hover {
-  border-color: #C9A84C;
-  background: rgba(201,168,76,0.06);
-}
-
-/* SECTION LABELS */
-body.thor-page .section-eyebrow { color: #C9A84C; }
-body.thor-page .section-title { color: #F5EDD6; }
-body.thor-page .section-divider { background: #C9A84C; opacity: 0.6; }
-
-/* BREATHING */
-body.thor-page #breathe { background: #1C1333; }
-body.thor-page .breathe-label { color: #C9A84C; opacity: 0.6; }
-body.thor-page .breathe-title { color: #F5EDD6; }
-body.thor-page .breathe-subtitle { color: #D4CCBA; }
-body.thor-page .breathe-core { background: #6B4FA0; }
-body.thor-page .breathe-ring { border-color: #C9A84C; opacity: 0.2; }
-body.thor-page .breathe-ring-2 { border-color: #C9A84C; opacity: 0.15; }
-body.thor-page .breathe-ring-3 { border-color: #C9A84C; opacity: 0.1; }
-body.thor-page .breathe-text { color: #F5EDD6; }
-body.thor-page .breathe-instruction { color: #C9A84C; }
-body.thor-page .breathe-btn { border-color: rgba(201,168,76,0.35); color: #C9A84C; }
-body.thor-page .breathe-btn:hover {
-  background: #C9A84C;
-  border-color: #C9A84C;
-  color: #0F0A1E;
-}
-
-/* SERVICES */
-body.thor-page #services { background: #0F0A1E; }
-body.thor-page .service-card { background: #1C1333; }
-body.thor-page .service-card:hover { background: #231840; }
-body.thor-page .service-card::before { background: #C9A84C; }
-body.thor-page .service-number { color: #C9A84C; opacity: 0.2; }
-body.thor-page .service-title { color: #F5EDD6; }
-body.thor-page .service-text { color: #D4CCBA; }
-body.thor-page .service-cta { color: #C9A84C; }
-body.thor-page .service-cta:hover { border-color: #C9A84C; }
-
-/* ABOUT */
-body.thor-page #about { background: #1C1333; }
-body.thor-page .about-left .section-eyebrow { color: #C9A84C; opacity: 0.8; }
-body.thor-page .about-left .section-title { color: #F5EDD6; }
-body.thor-page .about-left .section-divider { background: #C9A84C; opacity: 0.5; }
-body.thor-page .about-bio { color: rgba(245,237,214,0.75); }
-body.thor-page .credential-item { border-color: rgba(201,168,76,0.1); }
-body.thor-page .credential-year { color: #C9A84C; opacity: 0.65; }
-body.thor-page .credential-text { color: rgba(245,237,214,0.65); }
-body.thor-page .about-socials .social-link {
-  border-color: rgba(201,168,76,0.2);
-  color: rgba(245,237,214,0.6);
-}
-body.thor-page .about-socials .social-link:hover {
-  border-color: #C9A84C;
-  color: #F5EDD6;
-  background: rgba(201,168,76,0.07);
-}
-body.thor-page .lgbt-badge { display: none; }
-
-/* REVIEWS */
-body.thor-page #reviews { background: #0F0A1E; }
-body.thor-page .review-card { background: #1C1333; }
-body.thor-page .review-quote { color: #C9A84C; opacity: 0.3; }
-body.thor-page .review-text { color: #D4CCBA; }
-body.thor-page .review-author { color: #C9A84C; opacity: 0.9; }
-body.thor-page .review-role { color: #D4CCBA; opacity: 0.6; }
-
-/* RESOURCES */
-body.thor-page #resources { background: #1C1333; }
-body.thor-page .resource-card {
-  background: #0F0A1E;
-  border-color: rgba(201,168,76,0.08);
-}
-body.thor-page .resource-card:hover {
-  border-color: #C9A84C;
-  transform: translateY(-3px);
-}
-body.thor-page .resource-card::after { color: #C9A84C; }
-body.thor-page .resource-tag { color: #C9A84C; opacity: 0.75; }
-body.thor-page .resource-title { color: #F5EDD6; }
-body.thor-page .resource-desc { color: #D4CCBA; }
-
-/* CTA */
-body.thor-page #cta { background: #0A0716; }
-body.thor-page .cta-title { color: #F5EDD6; }
-body.thor-page .cta-title em { color: #C9A84C; opacity: 0.7; }
-body.thor-page .cta-text { color: rgba(245,237,214,0.5); }
-
-/* FOOTER */
-body.thor-page footer {
-  background: #0F0A1E;
-  border-top-color: rgba(201,168,76,0.08);
-}
-body.thor-page .footer-text { color: rgba(245,237,214,0.2); }
-body.thor-page .footer-thor { color: rgba(201,168,76,0.08); }
-body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
-
-/* DISCLAIMER BANNER (thor-specific element) */
-.thor-disclaimer-banner {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 50;
-  background: rgba(15,10,30,0.92);
-  backdrop-filter: blur(6px);
-  border-top: 1px solid rgba(201,168,76,0.15);
-  padding: 0.6rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.thor-disclaimer-banner p {
-  font-size: 0.72rem;
-  color: rgba(201,168,76,0.45);
-  letter-spacing: 0.04em;
-  flex: 1;
-}
-.thor-back-btn {
-  font-size: 0.72rem;
-  color: rgba(201,168,76,0.55);
-  text-decoration: none;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(201,168,76,0.2);
-  transition: color 0.2s, border-color 0.2s;
-  white-space: nowrap;
-}
-.thor-back-btn:hover { color: #C9A84C; border-color: #C9A84C; }
-
-/* RESPONSIVE */
-@media (max-width: 480px) {
-  .thor-disclaimer-banner { padding: 0.6rem 1rem; }
-}
-
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/thor.css">
 </head>
 <body class="thor-page">
 
@@ -466,8 +264,8 @@ body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
         <article class="review-card fade-up">
           <div class="review-quote" aria-hidden="true">"</div>
           <blockquote class="review-text">
-            Я перетворював людей на камінь уже тисячоліття і не розумів чому.
-            Після шести сесій зрозумів: це була дисоціація після травми.
+            Я перетворювала людей на камінь уже тисячоліття і не розуміла чому.
+            Після шести сесій зрозуміла: це була дисоціація після травми.
             Тепер я ношу окуляри і маю здорові стосунки. Дивно, але факт.
           </blockquote>
           <p class="review-author">Медуза Горгона</p>
@@ -477,9 +275,9 @@ body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
         <article class="review-card fade-up">
           <div class="review-quote" aria-hidden="true">"</div>
           <blockquote class="review-text">
-            Думав, що психологія — це не для богів. Але після того як я на
-            третій сесії перетворив крісло на лебедя — зрозумів, що мій
-            контроль-іш поведінка потребує уваги. Зараз на шостій сесії.
+            Думала, що психологія — це не для богів. Але після того як я на
+            третій сесії перетворила крісло на жабу — зрозуміла, що моя
+            поведінка потребує уваги. Зараз на шостій сесії.
             Крісло ціле.
           </blockquote>
           <p class="review-author">Зевс, верховний бог</p>
