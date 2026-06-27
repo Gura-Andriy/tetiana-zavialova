@@ -1,0 +1,232 @@
+/* ============================================================
+   THOR — CSS OVERRIDE
+   Extends css/styles.css with a mythic dark-gold palette.
+   Import AFTER styles.css.
+
+   Palette:
+     --deep:        #0F0A1E  — night sky background
+     --deep-2:      #1C1333  — section alt background
+     --gold:        #C9A84C  — primary accent (replaces rust)
+     --gold-light:  #E2C27A  — gold hover
+     --parchment:   #F5EDD6  — text on dark (replaces sand)
+     --purple:      #6B4FA0  — indigo replacement
+     --purple-light:#9070C8
+     --purple-dark: #4A3070
+     --smoke:       #D4CCBA  — muted text
+   ============================================================ */
+
+:root {
+  --indigo:        #6B4FA0;
+  --indigo-light:  #9070C8;
+  --indigo-dark:   #4A3070;
+  --sand:          #F5EDD6;
+  --sand-dark:     #EDE1C0;
+  --graphite:      #1C1333;
+  --graphite-light:#8A7FA0;
+  --rust:          #C9A84C;
+  --rust-light:    #E2C27A;
+  --white:         #0F0A1E;
+
+  --gold:          #C9A84C;
+  --gold-light:    #E2C27A;
+  --deep:          #0F0A1E;
+  --deep-2:        #1C1333;
+  --parchment:     #F5EDD6;
+  --smoke:         #D4CCBA;
+  --rune:          rgba(201,168,76,0.15);
+}
+
+/* ---- GLOBAL BODY ------------------------------------------ */
+body {
+  background: var(--deep);
+  color: var(--parchment);
+}
+
+/* ---- NAV -------------------------------------------------- */
+nav { border-bottom: 1px solid rgba(201,168,76,0.1); }
+nav.scrolled {
+  background: rgba(15,10,30,0.96);
+  box-shadow: 0 1px 0 rgba(201,168,76,0.15);
+}
+.nav-logo { color: var(--parchment); }
+nav.scrolled .nav-logo { color: var(--gold); }
+nav.scrolled .nav-links a { color: var(--smoke); }
+nav.scrolled .nav-links a:hover { color: var(--gold-light); }
+nav.scrolled .nav-burger span { background: var(--parchment); }
+
+/* ---- MOBILE MENU ------------------------------------------ */
+.mobile-menu { background: var(--deep-2); }
+.mobile-menu a { color: var(--parchment); }
+.mobile-menu a:hover { color: var(--gold-light); }
+.mobile-menu-close { color: var(--parchment); }
+
+/* ---- HERO ------------------------------------------------- */
+#home { background: var(--deep); }
+
+.hero-orb-1 { background: var(--purple, #6B4FA0); opacity: 0.08; }
+.hero-orb-2 { background: var(--gold); opacity: 0.07; }
+
+/* Subtle rune texture via repeating gradient */
+#home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(107,79,160,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-eyebrow { color: rgba(201,168,76,0.6); letter-spacing: 0.22em; }
+.hero-title { color: var(--parchment); }
+.hero-title em { color: var(--gold); font-style: italic; }
+.hero-tagline { color: rgba(245,237,214,0.65); }
+
+.scroll-line { background: rgba(201,168,76,0.2); }
+
+/* ---- BUTTONS ---------------------------------------------- */
+.btn-primary { background: var(--gold); color: var(--deep); }
+.btn-primary:hover { background: var(--gold-light); }
+.btn-outline {
+  color: var(--parchment);
+  border-color: rgba(201,168,76,0.35);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+
+/* ---- SECTION LABELS --------------------------------------- */
+.section-eyebrow { color: var(--gold); }
+.section-title { color: var(--parchment); }
+.section-divider { background: var(--gold); opacity: 0.6; }
+
+/* ---- BREATHING -------------------------------------------- */
+#breathe { background: var(--deep-2); }
+.breathe-label { color: var(--gold); opacity: 0.6; }
+.breathe-title { color: var(--parchment); }
+.breathe-subtitle { color: var(--smoke); }
+.breathe-core { background: var(--indigo); }
+.breathe-ring { border-color: var(--gold); opacity: 0.2; }
+.breathe-ring-2 { border-color: var(--gold); opacity: 0.15; }
+.breathe-ring-3 { border-color: var(--gold); opacity: 0.1; }
+.breathe-text { color: var(--parchment); }
+.breathe-instruction { color: var(--gold); }
+.breathe-btn {
+  border-color: rgba(201,168,76,0.35);
+  color: var(--gold);
+}
+.breathe-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--deep);
+}
+
+/* ---- SERVICES --------------------------------------------- */
+#services { background: var(--deep); }
+.service-card { background: var(--deep-2); }
+.service-card:hover { background: #231840; }
+.service-card::before { background: var(--gold); }
+.service-number { color: var(--gold); opacity: 0.2; }
+.service-title { color: var(--parchment); }
+.service-text { color: var(--smoke); }
+.service-cta { color: var(--gold); }
+.service-cta:hover { border-color: var(--gold); }
+
+/* ---- ABOUT ------------------------------------------------ */
+#about { background: var(--deep-2); }
+.about-left .section-eyebrow { color: var(--gold); opacity: 0.8; }
+.about-left .section-title { color: var(--parchment); }
+.about-left .section-divider { background: var(--gold); opacity: 0.5; }
+.about-bio { color: rgba(245,237,214,0.75); }
+.credential-item { border-color: rgba(201,168,76,0.1); }
+.credential-year { color: var(--gold); opacity: 0.65; }
+.credential-text { color: rgba(245,237,214,0.65); }
+
+.about-socials .social-link {
+  border-color: rgba(201,168,76,0.2);
+  color: rgba(245,237,214,0.6);
+}
+.about-socials .social-link:hover {
+  border-color: var(--gold);
+  color: var(--parchment);
+  background: rgba(201,168,76,0.07);
+}
+
+/* hide LGBT badge on thor page — not relevant to the mythic context */
+.lgbt-badge { display: none; }
+
+/* ---- REVIEWS ---------------------------------------------- */
+#reviews { background: var(--deep); }
+.review-card { background: var(--deep-2); }
+.review-quote { color: var(--gold); opacity: 0.3; }
+.review-text { color: var(--smoke); }
+.review-author { color: var(--gold); opacity: 0.9; }
+.review-role { color: var(--smoke); opacity: 0.6; }
+
+/* ---- RESOURCES -------------------------------------------- */
+#resources { background: var(--deep-2); }
+.resource-card {
+  background: var(--deep);
+  border-color: rgba(201,168,76,0.08);
+}
+.resource-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.resource-card::after { color: var(--gold); }
+.resource-tag { color: var(--gold); opacity: 0.75; }
+.resource-title { color: var(--parchment); }
+.resource-desc { color: var(--smoke); }
+
+/* ---- CTA -------------------------------------------------- */
+#cta { background: #0A0716; }
+.cta-title { color: var(--parchment); }
+.cta-title em { color: var(--gold); opacity: 0.7; }
+.cta-text { color: rgba(245,237,214,0.5); }
+
+/* ---- FOOTER ----------------------------------------------- */
+footer {
+  background: var(--deep);
+  border-top-color: rgba(201,168,76,0.08);
+}
+.footer-text { color: rgba(245,237,214,0.2); }
+.footer-thor { color: rgba(201,168,76,0.08); }
+.footer-thor:hover { color: rgba(201,168,76,0.25); }
+
+/* ---- THOR-SPECIFIC: disclaimer banner --------------------- */
+.thor-disclaimer-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(15,10,30,0.92);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.thor-disclaimer-banner p {
+  font-size: 0.72rem;
+  color: rgba(201,168,76,0.45);
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+.thor-back-btn {
+  font-size: 0.72rem;
+  color: rgba(201,168,76,0.55);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.thor-back-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ---- RESPONSIVE ------------------------------------------- */
+@media (max-width: 480px) {
+  .thor-disclaimer-banner { padding: 0.6rem 1rem; }
+}

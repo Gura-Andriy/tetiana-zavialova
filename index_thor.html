@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тетяна Завʼялова — Психолог для легенд ⚡</title>
+  <meta name="description" content="Психологічна підтримка для героїв, богів, лиходіїв і всіх, хто застряг між двома світами. Конфіденційність гарантована навіть від оракулів.">
+  <!-- Noindex — це пасхалка, не для пошукових систем -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Base styles + thor palette override -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/thor.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav" role="navigation" aria-label="Головне меню">
+    <a href="#home" class="nav-logo">⚡ Тетяна Завʼялова</a>
+    <ul class="nav-links">
+      <li><a href="#home">Головна</a></li>
+      <li><a href="#about">Про мене</a></li>
+      <li><a href="#resources">Ресурси</a></li>
+      <li><a href="#reviews">Відгуки</a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Відкрити меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Навігація">
+    <button class="mobile-menu-close" id="menu-close" aria-label="Закрити меню">×</button>
+    <a href="#home">Головна</a>
+    <a href="#about">Про мене</a>
+    <a href="#resources">Ресурси</a>
+    <a href="#reviews">Відгуки</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" aria-label="Головний екран">
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <p class="hero-eyebrow">Психолог для легенд · Супервізор богів</p>
+    <h1 class="hero-title">
+      Тетяна<br>
+      <em>Завʼялова</em>
+    </h1>
+    <p class="hero-tagline">
+      Безпечний простір для героїв, богів, лиходіїв і всіх,
+      хто застряг між двома світами — незалежно від кількості голів
+    </p>
+
+    <div class="hero-cta-group">
+      <a
+        href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B9%2F%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8E"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Для героїв та їхніх батьків
+      </a>
+      <a
+        href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D0%B1%D0%BE%D0%B3%2F%D0%B1%D0%BE%D0%B3%D0%B8%D0%BD%D1%8F%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%B2%D1%96%D0%B7%D1%96%D1%8E"
+        class="btn-outline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Для богів та напівбогів
+      </a>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>гортай</span>
+    </div>
+  </section>
+
+
+  <!-- BREATHING -->
+  <section id="breathe" aria-label="Дихальна вправа">
+    <div class="container-narrow" style="text-align:center;">
+      <p class="breathe-label">Хвилинка для героя</p>
+      <h2 class="breathe-title">Навіть боги дихають</h2>
+      <p class="breathe-subtitle">
+        Перш ніж рушати на подвиг або тікати від дракона — просто подихайте.
+        Навіть Геракл робив перерву між подвигами. Натисніть на коло.
+      </p>
+
+      <div
+        class="breathe-container"
+        id="breatheContainer"
+        role="button"
+        aria-label="Запустити дихальну вправу"
+        tabindex="0"
+      >
+        <div class="breathe-ring"   aria-hidden="true"></div>
+        <div class="breathe-ring breathe-ring-2" aria-hidden="true"></div>
+        <div class="breathe-ring breathe-ring-3" aria-hidden="true"></div>
+        <div class="breathe-core" id="breatheCore">
+          <div class="breathe-text" id="breatheText">почати</div>
+        </div>
+      </div>
+
+      <p class="breathe-instruction" id="breatheInstruction" aria-live="polite">
+        Натисніть, щоб почати
+      </p>
+      <button
+        class="breathe-btn"
+        id="breatheStop"
+        style="display:none;"
+        aria-label="Зупинити вправу"
+      >зупинити</button>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services" aria-label="Напрямки роботи">
+    <div class="container">
+      <p class="section-eyebrow fade-up">Спеціалізації</p>
+      <h2 class="section-title fade-up">З ким і як<br>я працюю</h2>
+      <div class="section-divider fade-up" aria-hidden="true"></div>
+
+      <div class="services-grid">
+
+        <article class="service-card fade-up">
+          <div class="service-number" aria-hidden="true">01</div>
+          <h3 class="service-title">Герої та напівбоги</h3>
+          <p class="service-text">
+            Синдром самозванця після дванадцятого подвигу. Тривога перед
+            тринадцятим. Складнощі з делегуванням — «якщо хочеш зробити добре,
+            убий дракона сам». Індивідуальні сесії, меч здавати не обовʼязково.
+          </p>
+          <a
+            href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B9%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8E"
+            class="service-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Записатись на квест</a>
+        </article>
+
+        <article class="service-card fade-up">
+          <div class="service-number" aria-hidden="true">02</div>
+          <h3 class="service-title">Боги та безсмертні</h3>
+          <p class="service-text">
+            Екзистенційна нудьга від вічності. Труднощі з емпатією до смертних
+            («вони такі... тимчасові»). Нарцисичні патерни, складні стосунки
+            з власним пантеоном. Сесії тривають рівно одну людську добу.
+          </p>
+          <a
+            href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D0%B1%D0%BE%D0%B3%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8E"
+            class="service-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Записатись на сесію</a>
+        </article>
+
+        <article class="service-card fade-up">
+          <div class="service-number" aria-hidden="true">03</div>
+          <h3 class="service-title">Супервізія для чарівників</h3>
+          <p class="service-text">
+            Вигорання після тисячоліть практики. «Мій учень перевершив мене —
+            і що тепер?» Розбір складних випадків: прокляття, трансформації,
+            роботи з клієнтами під Imperius. Конфіденційно. Без осуду.
+          </p>
+          <a
+            href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D1%87%D0%B0%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%B2%D1%96%D0%B7%D1%96%D1%8E"
+            class="service-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Записатись на супервізію</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="Про мене">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-left">
+          <p class="section-eyebrow">Про психолога</p>
+          <h2 class="section-title">
+            Психолог,<br>яка вижила<br><em>після Зевса</em>
+          </h2>
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <p class="about-bio">
+            Я — психолог з фокусом на роботі з персонажами, чиї внутрішні конфлікти
+            буквально змінюють хід історії. Вірю, що навіть той, хто несе на плечах
+            небесне склепіння, має право сказати «мені важко» — і бути почутим.
+          </p>
+          <p class="about-bio">
+            У роботі з колегами-чарівниками та оракулами допомагаю побачити те,
+            що важко розгледіти крізь власні пророцтва. Рости — не значить
+            знати майбутнє. Іноді достатньо пережити сьогоднішній понеділок.
+          </p>
+
+          <div class="about-socials">
+            <a href="https://www.facebook.com/share/1CjKU2RE9J/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/tetyana.zavyalova?igsh=N3BuOW9nb2phMTQ5&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://t.me/maisternya_psyhologa" class="social-link" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+          </div>
+        </div>
+
+        <dl class="about-credentials" aria-label="Кваліфікація">
+          <div class="credential-item">
+            <dt class="credential-year">Освіта</dt>
+            <dd class="credential-text">Вища психологічна освіта. Спеціалізація: клінічна робота з персонажами з підвищеним рівнем харизми та пророчого навантаження.</dd>
+          </div>
+          <div class="credential-item">
+            <dt class="credential-year">Підхід</dt>
+            <dd class="credential-text">Гештальт-терапія, травмафокусовані методи, наративний підхід для клієнтів зі складною сюжетною аркою.</dd>
+          </div>
+          <div class="credential-item">
+            <dt class="credential-year">Досвід</dt>
+            <dd class="credential-text">Понад 7 людських років практики. Серед клієнтів — герої, антигерої, нейтральні NPC та один дракон у стані переосмислення.</dd>
+          </div>
+          <div class="credential-item">
+            <dt class="credential-year">Супервізія</dt>
+            <dd class="credential-text">Регулярна особиста терапія. Супервізор — не оракул, але це не применшує цінності процесу.</dd>
+          </div>
+          <div class="credential-item">
+            <dt class="credential-year">Мови</dt>
+            <dd class="credential-text">Українська, давньогрецька (базовий рівень), мова дракона (тільки пасивне розуміння).</dd>
+          </div>
+        </dl>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-label="Відгуки клієнтів">
+    <div class="container">
+      <p class="section-eyebrow fade-up">Відгуки</p>
+      <h2 class="section-title fade-up">Що кажуть<br>легенди</h2>
+      <div class="section-divider fade-up" aria-hidden="true"></div>
+
+      <div class="reviews-grid">
+
+        <article class="review-card fade-up">
+          <div class="review-quote" aria-hidden="true">"</div>
+          <blockquote class="review-text">
+            Прийшов із запитом «бути чи не бути» — пішов із відповіддю.
+            Виявляється, за цим стоїть не філософія, а класична тривога уникання
+            і незавершений гештальт з батьком. Рекомендую, якщо ви принц
+            і вам потрібна не армія, а хороший терапевт.
+          </blockquote>
+          <p class="review-author">Гамлет, принц Данський</p>
+          <p class="review-role">прокрастинація, тривога рішень</p>
+        </article>
+
+        <article class="review-card fade-up">
+          <div class="review-quote" aria-hidden="true">"</div>
+          <blockquote class="review-text">
+            Я перетворювала людей на камінь уже тисячоліття і не розуміла чому.
+            Після шести сесій зрозуміла: це була дисоціація після травми.
+            Тепер я ношу окуляри і маю здорові стосунки. Дивно, але факт.
+          </blockquote>
+          <p class="review-author">Медуза Горгона</p>
+          <p class="review-role">ПТСР, вторинна травма</p>
+        </article>
+
+        <article class="review-card fade-up">
+          <div class="review-quote" aria-hidden="true">"</div>
+          <blockquote class="review-text">
+            Думав, що психологія — це не для богів. Але після того як я на
+            третій сесії перетворив крісло на жабу — зрозумів, що моя
+            поведінка потребує уваги. Зараз на шостій сесії.
+            Крісло ціле.
+          </blockquote>
+          <p class="review-author">Зевс, верховний бог</p>
+          <p class="review-role">нарцисизм, контроль, зради</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RESOURCES -->
+  <section id="resources" aria-label="Ресурси">
+    <div class="container">
+      <p class="section-eyebrow fade-up">Безкоштовні ресурси</p>
+      <h2 class="section-title fade-up">Корисне<br>для легенд</h2>
+      <div class="section-divider fade-up" aria-hidden="true"></div>
+
+      <div class="resources-grid">
+
+        <a
+          href="https://t.me/maisternya_psyhologa"
+          class="resource-card fade-up"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Telegram-канал Майстерня психолога"
+        >
+          <p class="resource-tag">Telegram · Для чарівників і оракулів</p>
+          <h3 class="resource-title">Майстерня психолога</h3>
+          <p class="resource-desc">
+            Інструменти, кейси, роздуми про практику. Навіть якщо ваші клієнти
+            мають крила або третє око — принципи роботи ті самі. Майже.
+          </p>
+        </a>
+
+        <a
+          href="https://www.instagram.com/tetyana.zavyalova?igsh=N3BuOW9nb2phMTQ5&utm_source=qr"
+          class="resource-card fade-up"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram @tetyana.zavyalova"
+        >
+          <p class="resource-tag">Instagram · Для героїв та їхніх сімей</p>
+          <h3 class="resource-title">@tetyana.zavyalova</h3>
+          <p class="resource-desc">
+            Про підлітковий вік у сімʼях зі складним епосом, комунікацію без
+            меча, межі та близькість. Навіть якщо ваша мама — богиня.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section id="cta" aria-label="Запис на консультацію">
+    <div class="container-narrow">
+      <h2 class="cta-title fade-up">
+        Навіть герої<br><em>просять про допомогу</em>
+      </h2>
+      <p class="cta-text fade-up">
+        Написати у Telegram — найпростіший спосіб. Перетворення на тварин
+        на прийомі не передбачено, але якщо щось піде не так — є запасне крісло.
+      </p>
+      <div class="hero-cta-group fade-up">
+        <a
+          href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B9%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8E"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Записатись на консультацію</a>
+        <a
+          href="https://t.me/Tetiana_Zavialova?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%A2%D0%B5%D1%82%D1%8F%D0%BD%D0%BE!%20%D0%AF%20%D1%87%D0%B0%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%20%D1%96%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%B2%D1%96%D0%B7%D1%96%D1%8E"
+          class="btn-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Записатись на супервізію</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p class="footer-text">
+      © Тетяна Завʼялова · Психолог для легенд · Усі подвиги захищено авторським правом
+    </p>
+    <br>
+    <a href="index.html" class="footer-thor" style="font-size:0.65rem; text-decoration:none;">
+      ← повернутись у реальність
+    </a>
+  </footer>
+
+
+  <!-- Disclaimer banner — fixed bottom -->
+  <div class="thor-disclaimer-banner" role="note" aria-label="Застереження">
+    <p>
+      ⚡ Це сатирична пасхалка. Реальний сайт — для справжніх людей зі справжніми почуттями.
+      Усі персонажі вигадані. Зевс погодження не давав.
+    </p>
+    <a href="index.html" class="thor-back-btn" data-back aria-label="Повернутись на головний сайт">
+      Повернутись →
+    </a>
+  </div>
+
+
+  <!-- Scripts: base classes first, then thor extension -->
+  <script src="js/main.js" defer></script>
+  <script src="js/thor.js" defer></script>
+
+</body>
+</html>
