@@ -278,13 +278,6 @@ class EasterEgg {
   }
 }
 
-
-/* ============================================================
-   App
-   Root controller — wires everything together on DOMContentLoaded.
-   ============================================================ */
-
-
 /* ============================================================
    App
    Root controller — wires everything together on DOMContentLoaded.

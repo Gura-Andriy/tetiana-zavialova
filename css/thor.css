@@ -1,11 +1,4 @@
-/* ============================================================
-   THOR — повністю ізольований CSS
-   НЕ використовує var() і НЕ залежить від styles.css токенів.
-   Всі кольори — прямі hex. Нуль витоку на index.html.
-   Всі селектори прив'язані до body.thor-page.
-   ============================================================ */
-
-/* Palette reference (comments only — не використовується як змінні):
+/* Palette reference (comments only):
    deep      #0F0A1E   deep-2   #1C1333
    gold      #C9A84C   gold-lt  #E2C27A
    parchment #F5EDD6   smoke    #D4CCBA
