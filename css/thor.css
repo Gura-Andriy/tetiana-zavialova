@@ -1,60 +1,49 @@
 /* ============================================================
-   THOR — CSS OVERRIDE
-   Всі правила загорнуті в body.thor-page — жодного витоку
-   на index.html через кеш браузера або GitHub Pages.
-   Підключається тільки в index_thor.html, ПІСЛЯ styles.css.
+   THOR — повністю ізольований CSS
+   НЕ використовує var() і НЕ залежить від styles.css токенів.
+   Всі кольори — прямі hex. Нуль витоку на index.html.
+   Всі селектори прив'язані до body.thor-page.
    ============================================================ */
 
+/* Palette reference (comments only — не використовується як змінні):
+   deep      #0F0A1E   deep-2   #1C1333
+   gold      #C9A84C   gold-lt  #E2C27A
+   parchment #F5EDD6   smoke    #D4CCBA
+   purple    #6B4FA0   purp-lt  #9070C8
+*/
+
 body.thor-page {
-  /* --- Palette tokens (локальні для цієї сторінки) --- */
-  --indigo:        #6B4FA0;
-  --indigo-light:  #9070C8;
-  --indigo-dark:   #4A3070;
-  --sand:          #F5EDD6;
-  --sand-dark:     #EDE1C0;
-  --graphite:      #1C1333;
-  --graphite-light:#8A7FA0;
-  --rust:          #C9A84C;
-  --rust-light:    #E2C27A;
-  --white:         #0F0A1E;
-
-  --gold:          #C9A84C;
-  --gold-light:    #E2C27A;
-  --deep:          #0F0A1E;
-  --deep-2:        #1C1333;
-  --parchment:     #F5EDD6;
-  --smoke:         #D4CCBA;
-
   background: #0F0A1E;
   color: #F5EDD6;
 }
 
-/* ---- NAV -------------------------------------------------- */
+/* NAV */
 body.thor-page nav {
   border-bottom: 1px solid rgba(201,168,76,0.1);
 }
 body.thor-page nav.scrolled {
   background: rgba(15,10,30,0.96);
+  backdrop-filter: blur(8px);
   box-shadow: 0 1px 0 rgba(201,168,76,0.15);
 }
-body.thor-page .nav-logo { color: var(--parchment); }
-body.thor-page nav.scrolled .nav-logo { color: var(--gold); }
-body.thor-page nav.scrolled .nav-links a { color: var(--smoke); }
-body.thor-page nav.scrolled .nav-links a:hover { color: var(--gold-light); }
-body.thor-page nav.scrolled .nav-burger span { background: var(--parchment); }
+body.thor-page .nav-logo { color: #F5EDD6; }
+body.thor-page nav.scrolled .nav-logo { color: #C9A84C; }
+body.thor-page .nav-links a { color: rgba(245,237,214,0.85); }
+body.thor-page nav.scrolled .nav-links a { color: #D4CCBA; }
+body.thor-page .nav-links a:hover,
+body.thor-page nav.scrolled .nav-links a:hover { color: #E2C27A; }
+body.thor-page nav.scrolled .nav-burger span { background: #F5EDD6; }
 
-/* ---- MOBILE MENU ------------------------------------------ */
-body.thor-page .mobile-menu { background: var(--deep-2); }
-body.thor-page .mobile-menu a { color: var(--parchment); }
-body.thor-page .mobile-menu a:hover { color: var(--gold-light); }
-body.thor-page .mobile-menu-close { color: var(--parchment); }
+/* MOBILE MENU */
+body.thor-page .mobile-menu { background: #1C1333; }
+body.thor-page .mobile-menu a { color: #F5EDD6; }
+body.thor-page .mobile-menu a:hover { color: #E2C27A; }
+body.thor-page .mobile-menu-close { color: #F5EDD6; }
 
-/* ---- HERO ------------------------------------------------- */
-body.thor-page #home { background: var(--deep); }
-
+/* HERO */
+body.thor-page #home { background: #0F0A1E; }
 body.thor-page .hero-orb-1 { background: #6B4FA0; opacity: 0.08; }
-body.thor-page .hero-orb-2 { background: var(--gold); opacity: 0.07; }
-
+body.thor-page .hero-orb-2 { background: #C9A84C; opacity: 0.07; }
 body.thor-page #home::before {
   content: '';
   position: absolute;
@@ -64,120 +53,114 @@ body.thor-page #home::before {
     radial-gradient(circle at 80% 20%, rgba(107,79,160,0.06) 0%, transparent 50%);
   pointer-events: none;
 }
-
 body.thor-page .hero-eyebrow { color: rgba(201,168,76,0.6); letter-spacing: 0.22em; }
-body.thor-page .hero-title   { color: var(--parchment); }
-body.thor-page .hero-title em { color: var(--gold); font-style: italic; }
+body.thor-page .hero-title { color: #F5EDD6; }
+body.thor-page .hero-title em { color: #C9A84C; font-style: italic; }
 body.thor-page .hero-tagline { color: rgba(245,237,214,0.65); }
-body.thor-page .scroll-line  { background: rgba(201,168,76,0.2); }
+body.thor-page .scroll-line { background: rgba(201,168,76,0.2); }
 
-/* ---- BUTTONS ---------------------------------------------- */
-body.thor-page .btn-primary { background: var(--gold); color: var(--deep); }
-body.thor-page .btn-primary:hover { background: var(--gold-light); }
-body.thor-page .btn-outline {
-  color: var(--parchment);
-  border-color: rgba(201,168,76,0.35);
-}
+/* BUTTONS */
+body.thor-page .btn-primary { background: #C9A84C; color: #0F0A1E; border: none; }
+body.thor-page .btn-primary:hover { background: #E2C27A; }
+body.thor-page .btn-outline { color: #F5EDD6; border-color: rgba(201,168,76,0.35); }
 body.thor-page .btn-outline:hover {
-  border-color: var(--gold);
+  border-color: #C9A84C;
   background: rgba(201,168,76,0.06);
 }
 
-/* ---- SECTION LABELS --------------------------------------- */
-body.thor-page .section-eyebrow { color: var(--gold); }
-body.thor-page .section-title   { color: var(--parchment); }
-body.thor-page .section-divider { background: var(--gold); opacity: 0.6; }
+/* SECTION LABELS */
+body.thor-page .section-eyebrow { color: #C9A84C; }
+body.thor-page .section-title { color: #F5EDD6; }
+body.thor-page .section-divider { background: #C9A84C; opacity: 0.6; }
 
-/* ---- BREATHING -------------------------------------------- */
-body.thor-page #breathe         { background: var(--deep-2); }
-body.thor-page .breathe-label   { color: var(--gold); opacity: 0.6; }
-body.thor-page .breathe-title   { color: var(--parchment); }
-body.thor-page .breathe-subtitle { color: var(--smoke); }
-body.thor-page .breathe-core    { background: var(--indigo); }
-body.thor-page .breathe-ring    { border-color: var(--gold); opacity: 0.2; }
-body.thor-page .breathe-ring-2  { border-color: var(--gold); opacity: 0.15; }
-body.thor-page .breathe-ring-3  { border-color: var(--gold); opacity: 0.1; }
-body.thor-page .breathe-text    { color: var(--parchment); }
-body.thor-page .breathe-instruction { color: var(--gold); }
-body.thor-page .breathe-btn {
-  border-color: rgba(201,168,76,0.35);
-  color: var(--gold);
-}
+/* BREATHING */
+body.thor-page #breathe { background: #1C1333; }
+body.thor-page .breathe-label { color: #C9A84C; opacity: 0.6; }
+body.thor-page .breathe-title { color: #F5EDD6; }
+body.thor-page .breathe-subtitle { color: #D4CCBA; }
+body.thor-page .breathe-core { background: #6B4FA0; }
+body.thor-page .breathe-ring { border-color: #C9A84C; opacity: 0.2; }
+body.thor-page .breathe-ring-2 { border-color: #C9A84C; opacity: 0.15; }
+body.thor-page .breathe-ring-3 { border-color: #C9A84C; opacity: 0.1; }
+body.thor-page .breathe-text { color: #F5EDD6; }
+body.thor-page .breathe-instruction { color: #C9A84C; }
+body.thor-page .breathe-btn { border-color: rgba(201,168,76,0.35); color: #C9A84C; }
 body.thor-page .breathe-btn:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--deep);
+  background: #C9A84C;
+  border-color: #C9A84C;
+  color: #0F0A1E;
 }
 
-/* ---- SERVICES --------------------------------------------- */
-body.thor-page #services        { background: var(--deep); }
-body.thor-page .service-card    { background: var(--deep-2); }
+/* SERVICES */
+body.thor-page #services { background: #0F0A1E; }
+body.thor-page .service-card { background: #1C1333; }
 body.thor-page .service-card:hover { background: #231840; }
-body.thor-page .service-card::before { background: var(--gold); }
-body.thor-page .service-number  { color: var(--gold); opacity: 0.2; }
-body.thor-page .service-title   { color: var(--parchment); }
-body.thor-page .service-text    { color: var(--smoke); }
-body.thor-page .service-cta     { color: var(--gold); }
-body.thor-page .service-cta:hover { border-color: var(--gold); }
+body.thor-page .service-card::before { background: #C9A84C; }
+body.thor-page .service-number { color: #C9A84C; opacity: 0.2; }
+body.thor-page .service-title { color: #F5EDD6; }
+body.thor-page .service-text { color: #D4CCBA; }
+body.thor-page .service-cta { color: #C9A84C; }
+body.thor-page .service-cta:hover { border-color: #C9A84C; }
 
-/* ---- ABOUT ------------------------------------------------ */
-body.thor-page #about           { background: var(--deep-2); }
-body.thor-page .about-left .section-eyebrow { color: var(--gold); opacity: 0.8; }
-body.thor-page .about-left .section-title   { color: var(--parchment); }
-body.thor-page .about-left .section-divider { background: var(--gold); opacity: 0.5; }
-body.thor-page .about-bio       { color: rgba(245,237,214,0.75); }
+/* ABOUT */
+body.thor-page #about { background: #1C1333; }
+body.thor-page .about-left .section-eyebrow { color: #C9A84C; opacity: 0.8; }
+body.thor-page .about-left .section-title { color: #F5EDD6; }
+body.thor-page .about-left .section-divider { background: #C9A84C; opacity: 0.5; }
+body.thor-page .about-bio { color: rgba(245,237,214,0.75); }
 body.thor-page .credential-item { border-color: rgba(201,168,76,0.1); }
-body.thor-page .credential-year { color: var(--gold); opacity: 0.65; }
+body.thor-page .credential-year { color: #C9A84C; opacity: 0.65; }
 body.thor-page .credential-text { color: rgba(245,237,214,0.65); }
-
 body.thor-page .about-socials .social-link {
   border-color: rgba(201,168,76,0.2);
   color: rgba(245,237,214,0.6);
 }
 body.thor-page .about-socials .social-link:hover {
-  border-color: var(--gold);
-  color: var(--parchment);
+  border-color: #C9A84C;
+  color: #F5EDD6;
   background: rgba(201,168,76,0.07);
 }
-
 body.thor-page .lgbt-badge { display: none; }
 
-/* ---- REVIEWS ---------------------------------------------- */
-body.thor-page #reviews         { background: var(--deep); }
-body.thor-page .review-card     { background: var(--deep-2); }
-body.thor-page .review-quote    { color: var(--gold); opacity: 0.3; }
-body.thor-page .review-text     { color: var(--smoke); }
-body.thor-page .review-author   { color: var(--gold); opacity: 0.9; }
-body.thor-page .review-role     { color: var(--smoke); opacity: 0.6; }
+/* REVIEWS */
+body.thor-page #reviews { background: #0F0A1E; }
+body.thor-page .review-card { background: #1C1333; }
+body.thor-page .review-quote { color: #C9A84C; opacity: 0.3; }
+body.thor-page .review-text { color: #D4CCBA; }
+body.thor-page .review-author { color: #C9A84C; opacity: 0.9; }
+body.thor-page .review-role { color: #D4CCBA; opacity: 0.6; }
 
-/* ---- RESOURCES -------------------------------------------- */
-body.thor-page #resources       { background: var(--deep-2); }
+/* RESOURCES */
+body.thor-page #resources { background: #1C1333; }
 body.thor-page .resource-card {
-  background: var(--deep);
+  background: #0F0A1E;
   border-color: rgba(201,168,76,0.08);
 }
-body.thor-page .resource-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-body.thor-page .resource-card::after { color: var(--gold); }
-body.thor-page .resource-tag    { color: var(--gold); opacity: 0.75; }
-body.thor-page .resource-title  { color: var(--parchment); }
-body.thor-page .resource-desc   { color: var(--smoke); }
+body.thor-page .resource-card:hover {
+  border-color: #C9A84C;
+  transform: translateY(-3px);
+}
+body.thor-page .resource-card::after { color: #C9A84C; }
+body.thor-page .resource-tag { color: #C9A84C; opacity: 0.75; }
+body.thor-page .resource-title { color: #F5EDD6; }
+body.thor-page .resource-desc { color: #D4CCBA; }
 
-/* ---- CTA -------------------------------------------------- */
-body.thor-page #cta             { background: #0A0716; }
-body.thor-page .cta-title       { color: var(--parchment); }
-body.thor-page .cta-title em    { color: var(--gold); opacity: 0.7; }
-body.thor-page .cta-text        { color: rgba(245,237,214,0.5); }
+/* CTA */
+body.thor-page #cta { background: #0A0716; }
+body.thor-page .cta-title { color: #F5EDD6; }
+body.thor-page .cta-title em { color: #C9A84C; opacity: 0.7; }
+body.thor-page .cta-text { color: rgba(245,237,214,0.5); }
 
-/* ---- FOOTER ----------------------------------------------- */
+/* FOOTER */
 body.thor-page footer {
-  background: var(--deep);
+  background: #0F0A1E;
   border-top-color: rgba(201,168,76,0.08);
 }
-body.thor-page .footer-text     { color: rgba(245,237,214,0.2); }
-body.thor-page .footer-thor     { color: rgba(201,168,76,0.08); }
+body.thor-page .footer-text { color: rgba(245,237,214,0.2); }
+body.thor-page .footer-thor { color: rgba(201,168,76,0.08); }
 body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
 
-/* ---- THOR-SPECIFIC: disclaimer banner --------------------- */
+/* DISCLAIMER BANNER (thor-specific element) */
 .thor-disclaimer-banner {
   position: fixed;
   bottom: 0; left: 0; right: 0;
@@ -210,7 +193,7 @@ body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
 }
 .thor-back-btn:hover { color: #C9A84C; border-color: #C9A84C; }
 
-/* ---- RESPONSIVE ------------------------------------------- */
+/* RESPONSIVE */
 @media (max-width: 480px) {
   .thor-disclaimer-banner { padding: 0.6rem 1rem; }
 }
