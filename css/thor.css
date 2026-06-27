@@ -1,21 +1,12 @@
 /* ============================================================
    THOR — CSS OVERRIDE
-   Extends css/styles.css with a mythic dark-gold palette.
-   Import AFTER styles.css.
-
-   Palette:
-     --deep:        #0F0A1E  — night sky background
-     --deep-2:      #1C1333  — section alt background
-     --gold:        #C9A84C  — primary accent (replaces rust)
-     --gold-light:  #E2C27A  — gold hover
-     --parchment:   #F5EDD6  — text on dark (replaces sand)
-     --purple:      #6B4FA0  — indigo replacement
-     --purple-light:#9070C8
-     --purple-dark: #4A3070
-     --smoke:       #D4CCBA  — muted text
+   Всі правила загорнуті в body.thor-page — жодного витоку
+   на index.html через кеш браузера або GitHub Pages.
+   Підключається тільки в index_thor.html, ПІСЛЯ styles.css.
    ============================================================ */
 
-:root {
+body.thor-page {
+  /* --- Palette tokens (локальні для цієї сторінки) --- */
   --indigo:        #6B4FA0;
   --indigo-light:  #9070C8;
   --indigo-dark:   #4A3070;
@@ -33,41 +24,38 @@
   --deep-2:        #1C1333;
   --parchment:     #F5EDD6;
   --smoke:         #D4CCBA;
-  --rune:          rgba(201,168,76,0.15);
-}
 
-/* ---- GLOBAL BODY ------------------------------------------ */
-body {
-  background: var(--deep);
-  color: var(--parchment);
+  background: #0F0A1E;
+  color: #F5EDD6;
 }
 
 /* ---- NAV -------------------------------------------------- */
-nav { border-bottom: 1px solid rgba(201,168,76,0.1); }
-nav.scrolled {
+body.thor-page nav {
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+body.thor-page nav.scrolled {
   background: rgba(15,10,30,0.96);
   box-shadow: 0 1px 0 rgba(201,168,76,0.15);
 }
-.nav-logo { color: var(--parchment); }
-nav.scrolled .nav-logo { color: var(--gold); }
-nav.scrolled .nav-links a { color: var(--smoke); }
-nav.scrolled .nav-links a:hover { color: var(--gold-light); }
-nav.scrolled .nav-burger span { background: var(--parchment); }
+body.thor-page .nav-logo { color: var(--parchment); }
+body.thor-page nav.scrolled .nav-logo { color: var(--gold); }
+body.thor-page nav.scrolled .nav-links a { color: var(--smoke); }
+body.thor-page nav.scrolled .nav-links a:hover { color: var(--gold-light); }
+body.thor-page nav.scrolled .nav-burger span { background: var(--parchment); }
 
 /* ---- MOBILE MENU ------------------------------------------ */
-.mobile-menu { background: var(--deep-2); }
-.mobile-menu a { color: var(--parchment); }
-.mobile-menu a:hover { color: var(--gold-light); }
-.mobile-menu-close { color: var(--parchment); }
+body.thor-page .mobile-menu { background: var(--deep-2); }
+body.thor-page .mobile-menu a { color: var(--parchment); }
+body.thor-page .mobile-menu a:hover { color: var(--gold-light); }
+body.thor-page .mobile-menu-close { color: var(--parchment); }
 
 /* ---- HERO ------------------------------------------------- */
-#home { background: var(--deep); }
+body.thor-page #home { background: var(--deep); }
 
-.hero-orb-1 { background: var(--purple, #6B4FA0); opacity: 0.08; }
-.hero-orb-2 { background: var(--gold); opacity: 0.07; }
+body.thor-page .hero-orb-1 { background: #6B4FA0; opacity: 0.08; }
+body.thor-page .hero-orb-2 { background: var(--gold); opacity: 0.07; }
 
-/* Subtle rune texture via repeating gradient */
-#home::before {
+body.thor-page #home::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -77,126 +65,122 @@ nav.scrolled .nav-burger span { background: var(--parchment); }
   pointer-events: none;
 }
 
-.hero-eyebrow { color: rgba(201,168,76,0.6); letter-spacing: 0.22em; }
-.hero-title { color: var(--parchment); }
-.hero-title em { color: var(--gold); font-style: italic; }
-.hero-tagline { color: rgba(245,237,214,0.65); }
-
-.scroll-line { background: rgba(201,168,76,0.2); }
+body.thor-page .hero-eyebrow { color: rgba(201,168,76,0.6); letter-spacing: 0.22em; }
+body.thor-page .hero-title   { color: var(--parchment); }
+body.thor-page .hero-title em { color: var(--gold); font-style: italic; }
+body.thor-page .hero-tagline { color: rgba(245,237,214,0.65); }
+body.thor-page .scroll-line  { background: rgba(201,168,76,0.2); }
 
 /* ---- BUTTONS ---------------------------------------------- */
-.btn-primary { background: var(--gold); color: var(--deep); }
-.btn-primary:hover { background: var(--gold-light); }
-.btn-outline {
+body.thor-page .btn-primary { background: var(--gold); color: var(--deep); }
+body.thor-page .btn-primary:hover { background: var(--gold-light); }
+body.thor-page .btn-outline {
   color: var(--parchment);
   border-color: rgba(201,168,76,0.35);
 }
-.btn-outline:hover {
+body.thor-page .btn-outline:hover {
   border-color: var(--gold);
   background: rgba(201,168,76,0.06);
 }
 
 /* ---- SECTION LABELS --------------------------------------- */
-.section-eyebrow { color: var(--gold); }
-.section-title { color: var(--parchment); }
-.section-divider { background: var(--gold); opacity: 0.6; }
+body.thor-page .section-eyebrow { color: var(--gold); }
+body.thor-page .section-title   { color: var(--parchment); }
+body.thor-page .section-divider { background: var(--gold); opacity: 0.6; }
 
 /* ---- BREATHING -------------------------------------------- */
-#breathe { background: var(--deep-2); }
-.breathe-label { color: var(--gold); opacity: 0.6; }
-.breathe-title { color: var(--parchment); }
-.breathe-subtitle { color: var(--smoke); }
-.breathe-core { background: var(--indigo); }
-.breathe-ring { border-color: var(--gold); opacity: 0.2; }
-.breathe-ring-2 { border-color: var(--gold); opacity: 0.15; }
-.breathe-ring-3 { border-color: var(--gold); opacity: 0.1; }
-.breathe-text { color: var(--parchment); }
-.breathe-instruction { color: var(--gold); }
-.breathe-btn {
+body.thor-page #breathe         { background: var(--deep-2); }
+body.thor-page .breathe-label   { color: var(--gold); opacity: 0.6; }
+body.thor-page .breathe-title   { color: var(--parchment); }
+body.thor-page .breathe-subtitle { color: var(--smoke); }
+body.thor-page .breathe-core    { background: var(--indigo); }
+body.thor-page .breathe-ring    { border-color: var(--gold); opacity: 0.2; }
+body.thor-page .breathe-ring-2  { border-color: var(--gold); opacity: 0.15; }
+body.thor-page .breathe-ring-3  { border-color: var(--gold); opacity: 0.1; }
+body.thor-page .breathe-text    { color: var(--parchment); }
+body.thor-page .breathe-instruction { color: var(--gold); }
+body.thor-page .breathe-btn {
   border-color: rgba(201,168,76,0.35);
   color: var(--gold);
 }
-.breathe-btn:hover {
+body.thor-page .breathe-btn:hover {
   background: var(--gold);
   border-color: var(--gold);
   color: var(--deep);
 }
 
 /* ---- SERVICES --------------------------------------------- */
-#services { background: var(--deep); }
-.service-card { background: var(--deep-2); }
-.service-card:hover { background: #231840; }
-.service-card::before { background: var(--gold); }
-.service-number { color: var(--gold); opacity: 0.2; }
-.service-title { color: var(--parchment); }
-.service-text { color: var(--smoke); }
-.service-cta { color: var(--gold); }
-.service-cta:hover { border-color: var(--gold); }
+body.thor-page #services        { background: var(--deep); }
+body.thor-page .service-card    { background: var(--deep-2); }
+body.thor-page .service-card:hover { background: #231840; }
+body.thor-page .service-card::before { background: var(--gold); }
+body.thor-page .service-number  { color: var(--gold); opacity: 0.2; }
+body.thor-page .service-title   { color: var(--parchment); }
+body.thor-page .service-text    { color: var(--smoke); }
+body.thor-page .service-cta     { color: var(--gold); }
+body.thor-page .service-cta:hover { border-color: var(--gold); }
 
 /* ---- ABOUT ------------------------------------------------ */
-#about { background: var(--deep-2); }
-.about-left .section-eyebrow { color: var(--gold); opacity: 0.8; }
-.about-left .section-title { color: var(--parchment); }
-.about-left .section-divider { background: var(--gold); opacity: 0.5; }
-.about-bio { color: rgba(245,237,214,0.75); }
-.credential-item { border-color: rgba(201,168,76,0.1); }
-.credential-year { color: var(--gold); opacity: 0.65; }
-.credential-text { color: rgba(245,237,214,0.65); }
+body.thor-page #about           { background: var(--deep-2); }
+body.thor-page .about-left .section-eyebrow { color: var(--gold); opacity: 0.8; }
+body.thor-page .about-left .section-title   { color: var(--parchment); }
+body.thor-page .about-left .section-divider { background: var(--gold); opacity: 0.5; }
+body.thor-page .about-bio       { color: rgba(245,237,214,0.75); }
+body.thor-page .credential-item { border-color: rgba(201,168,76,0.1); }
+body.thor-page .credential-year { color: var(--gold); opacity: 0.65; }
+body.thor-page .credential-text { color: rgba(245,237,214,0.65); }
 
-.about-socials .social-link {
+body.thor-page .about-socials .social-link {
   border-color: rgba(201,168,76,0.2);
   color: rgba(245,237,214,0.6);
 }
-.about-socials .social-link:hover {
+body.thor-page .about-socials .social-link:hover {
   border-color: var(--gold);
   color: var(--parchment);
   background: rgba(201,168,76,0.07);
 }
 
-/* hide LGBT badge on thor page — not relevant to the mythic context */
-.lgbt-badge { display: none; }
+body.thor-page .lgbt-badge { display: none; }
 
 /* ---- REVIEWS ---------------------------------------------- */
-#reviews { background: var(--deep); }
-.review-card { background: var(--deep-2); }
-.review-quote { color: var(--gold); opacity: 0.3; }
-.review-text { color: var(--smoke); }
-.review-author { color: var(--gold); opacity: 0.9; }
-.review-role { color: var(--smoke); opacity: 0.6; }
+body.thor-page #reviews         { background: var(--deep); }
+body.thor-page .review-card     { background: var(--deep-2); }
+body.thor-page .review-quote    { color: var(--gold); opacity: 0.3; }
+body.thor-page .review-text     { color: var(--smoke); }
+body.thor-page .review-author   { color: var(--gold); opacity: 0.9; }
+body.thor-page .review-role     { color: var(--smoke); opacity: 0.6; }
 
 /* ---- RESOURCES -------------------------------------------- */
-#resources { background: var(--deep-2); }
-.resource-card {
+body.thor-page #resources       { background: var(--deep-2); }
+body.thor-page .resource-card {
   background: var(--deep);
   border-color: rgba(201,168,76,0.08);
 }
-.resource-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-.resource-card::after { color: var(--gold); }
-.resource-tag { color: var(--gold); opacity: 0.75; }
-.resource-title { color: var(--parchment); }
-.resource-desc { color: var(--smoke); }
+body.thor-page .resource-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+body.thor-page .resource-card::after { color: var(--gold); }
+body.thor-page .resource-tag    { color: var(--gold); opacity: 0.75; }
+body.thor-page .resource-title  { color: var(--parchment); }
+body.thor-page .resource-desc   { color: var(--smoke); }
 
 /* ---- CTA -------------------------------------------------- */
-#cta { background: #0A0716; }
-.cta-title { color: var(--parchment); }
-.cta-title em { color: var(--gold); opacity: 0.7; }
-.cta-text { color: rgba(245,237,214,0.5); }
+body.thor-page #cta             { background: #0A0716; }
+body.thor-page .cta-title       { color: var(--parchment); }
+body.thor-page .cta-title em    { color: var(--gold); opacity: 0.7; }
+body.thor-page .cta-text        { color: rgba(245,237,214,0.5); }
 
 /* ---- FOOTER ----------------------------------------------- */
-footer {
+body.thor-page footer {
   background: var(--deep);
   border-top-color: rgba(201,168,76,0.08);
 }
-.footer-text { color: rgba(245,237,214,0.2); }
-.footer-thor { color: rgba(201,168,76,0.08); }
-.footer-thor:hover { color: rgba(201,168,76,0.25); }
+body.thor-page .footer-text     { color: rgba(245,237,214,0.2); }
+body.thor-page .footer-thor     { color: rgba(201,168,76,0.08); }
+body.thor-page .footer-thor:hover { color: rgba(201,168,76,0.25); }
 
 /* ---- THOR-SPECIFIC: disclaimer banner --------------------- */
 .thor-disclaimer-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0; left: 0; right: 0;
   z-index: 50;
   background: rgba(15,10,30,0.92);
   backdrop-filter: blur(6px);
@@ -224,7 +208,7 @@ footer {
   transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
-.thor-back-btn:hover { color: var(--gold); border-color: var(--gold); }
+.thor-back-btn:hover { color: #C9A84C; border-color: #C9A84C; }
 
 /* ---- RESPONSIVE ------------------------------------------- */
 @media (max-width: 480px) {
